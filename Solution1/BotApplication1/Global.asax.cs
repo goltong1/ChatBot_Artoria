@@ -3,9 +3,11 @@ using Microsoft.Bot.Builder.Azure;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Autofac;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Optimization;
 using Microsoft.Bot.Connector;
 using System.Reflection;
-
 namespace BotApplication1
 {
     public class WebApiApplication : System.Web.HttpApplication
@@ -34,6 +36,13 @@ namespace BotApplication1
                     .AsSelf()
                     .SingleInstance();
             });
+
+
+            //MVC 설정
+            AreaRegistration.RegisterAllAreas();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

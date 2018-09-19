@@ -20,7 +20,7 @@ namespace BotApplication1
         {
             if (activity.GetActivityType() == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new Dialogs.Artoria_Talk());
+                await Conversation.SendAsync(activity, () => new Dialogs.KaKaoDialog());
             }
             else
             {
@@ -42,9 +42,9 @@ namespace BotApplication1
             {
                 if (message.MembersAdded.Any(o => o.Id == message.Recipient.Id))
                 {
-                    var reply = message.CreateReply("안녕하십니까. 저는 학생용 도우미 챗봇 Artoria입니다. 서비스를 시작하시려면 아무 말씀이나 해주십시오.");
-                    ConnectorClient connector = new ConnectorClient(new Uri(message.ServiceUrl));
-                    connector.Conversations.ReplyToActivityAsync(reply);
+                    //var reply = message.CreateReply("안녕하십니까. 저는 학생용 도우미 챗봇 Artoria입니다. 서비스를 시작하시려면 아무 말씀이나 해주십시오.");
+                    //ConnectorClient connector = new ConnectorClient(new Uri(message.ServiceUrl));
+                    //connector.Conversations.ReplyToActivityAsync(reply);
                 }
             }
             else if (messageType == ActivityTypes.ContactRelationUpdate)
