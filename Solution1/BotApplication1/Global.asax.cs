@@ -5,6 +5,9 @@ using Microsoft.Bot.Builder.Dialogs.Internals;
 using Autofac;
 using Microsoft.Bot.Connector;
 using System.Reflection;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Optimization;
 
 namespace BotApplication1
 {
@@ -34,6 +37,12 @@ namespace BotApplication1
                     .AsSelf()
                     .SingleInstance();
             });
+
+            //mvc 설정 추가(카카오용)
+            AreaRegistration.RegisterAllAreas();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

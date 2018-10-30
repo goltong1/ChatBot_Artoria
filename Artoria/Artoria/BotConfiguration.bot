@@ -1,0 +1,32 @@
+﻿{
+  "name": "Artoria",
+  "services": [
+    {
+      "type": "endpoint",
+      "name": "production",
+      "endpoint": "https://artoria.azurewebsites.net/api/messages",
+      "appId": "654e1e01-20fe-4786-b28e-dcec7666f04c",
+      "appPassword": "wpTWZJ203[{]hykzkBJP86@",
+      "id": "Artoria"
+    },
+    {
+      "type": "endpoint",
+      "name": "development",
+      "endpoint": "http://localhost:3978/api/messages",
+      "appId": "",
+      "appPassword": "",
+      "id": "1"
+    },
+    {
+      "type": "luis",
+      "name": "Artoria",
+      "AppId": "a0b1e3e1-4212-4251-8abc-249fa212f45c",
+      "SubscriptionKey": "",
+      "AuthoringKey": "efe57775900d488196a432a0e93304d5",
+      "GetEndpoint": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/a0b1e3e1-4212-4251-8abc-249fa212f45c?subscription-key=efe57775900d488196a432a0e93304d5&timezoneOffset=-360&q=",
+      "Region": "westus"
+    }
+  ],
+  "padlock": "",
+  "version": "2.0"
+}
